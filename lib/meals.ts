@@ -26,6 +26,23 @@ export function getTodayMeal(): Meal {
   return meals.week[dayIndex];
 }
 
+export function getMealForDay(dayOffset: number = 0): Meal {
+  const meals = getMeals();
+  const today = new Date().getDay();
+  // Convert Sunday (0) to index 6, Monday (1) to 0, etc.
+  const dayIndex = today === 0 ? 6 : today - 1;
+  const targetIndex = (dayIndex + dayOffset) % 7;
+  return meals.week[targetIndex];
+}
+
+export function getDayName(dayOffset: number = 0): string {
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const today = new Date().getDay();
+  const dayIndex = today === 0 ? 6 : today - 1;
+  const targetIndex = (dayIndex + dayOffset) % 7;
+  return days[targetIndex];
+}
+
 export function getAllMeals() {
   return getMeals().week;
 }
