@@ -1,0 +1,54 @@
+{
+  "week": [
+    {
+      "day": "Monday",
+      "breakfast": "Idli with sambar and coconut chutney",
+      "lunch": "Rice, dal, vegetable curry, and yogurt",
+      "snack": "Banana and milk",
+      "dinner": "Dosa with potato curry"
+    },
+    {
+      "day": "Tuesday",
+      "breakfast": "Poha with vegetables and peanuts",
+      "lunch": "Rice, sambar, beans curry, and papad",
+      "snack": "Apple slices and cheese",
+      "dinner": "Upma with vegetables"
+    },
+    {
+      "day": "Wednesday",
+      "breakfast": "Dosa with coconut chutney",
+      "lunch": "Rice, rasam, cabbage curry, and yogurt",
+      "snack": "Orange and biscuits",
+      "dinner": "Chapati with dal and vegetable curry"
+    },
+    {
+      "day": "Thursday",
+      "breakfast": "Idli with tomato chutney",
+      "lunch": "Rice, dal, okra curry, and pickle",
+      "snack": "Grapes and milk",
+      "dinner": "Pongal with sambar"
+    },
+    {
+      "day": "Friday",
+      "breakfast": "Upma with vegetables and cashews",
+      "lunch": "Rice, sambar, carrot curry, and yogurt",
+      "snack": "Banana and dates",
+      "dinner": "Dosa with sambar"
+    },
+    {
+      "day": "Saturday",
+      "breakfast": "Idli with sambar and coconut chutney",
+      "lunch": "Rice, dal, potato curry, and papad",
+      "snack": "Mango and milk",
+      "dinner": "Chapati with dal and vegetable curry"
+    },
+    {
+      "day": "Sunday",
+      "breakfast": "Dosa with potato curry",
+      "lunch": "Rice, sambar, mixed vegetable curry, and yogurt",
+      "snack": "Apple and cheese",
+      "dinner": "Pongal with coconut chutney"
+    }
+  ]
+}
+
