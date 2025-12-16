@@ -1,7 +1,20 @@
 import { MealData, Meal } from "@/types/meal";
 import mealsData from "@/data/meals.json";
 
+const STORAGE_KEY = "custom-meal-plan";
+
 export function getMeals(): MealData {
+  // Check if custom menu exists in localStorage
+  if (typeof window !== "undefined") {
+    const customMenu = localStorage.getItem(STORAGE_KEY);
+    if (customMenu) {
+      try {
+        return JSON.parse(customMenu);
+      } catch (e) {
+        console.error("Error parsing custom menu:", e);
+      }
+    }
+  }
   return mealsData as MealData;
 }
 
@@ -15,5 +28,24 @@ export function getTodayMeal(): Meal {
 
 export function getAllMeals() {
   return getMeals().week;
+}
+
+export function saveCustomMeals(meals: MealData) {
+  if (typeof window !== "undefined") {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(meals));
+  }
+}
+
+export function resetToDefaultMeals() {
+  if (typeof window !== "undefined") {
+    localStorage.removeItem(STORAGE_KEY);
+  }
+}
+
+export function hasCustomMeals(): boolean {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem(STORAGE_KEY) !== null;
+  }
+  return false;
 }
 

@@ -2,53 +2,52 @@
   "week": [
     {
       "day": "Monday",
-      "breakfast": "Idli with sambar and coconut chutney",
-      "lunch": "Rice, dal, vegetable curry, and yogurt",
-      "snack": "Banana and milk",
+      "breakfast": "Grated carrot dosa with peanut chutney",
+      "lunch": "Rice sambar/dal",
+      "snack": "Boiled corn",
       "dinner": "Dosa with potato curry"
     },
     {
       "day": "Tuesday",
-      "breakfast": "Poha with vegetables and peanuts",
-      "lunch": "Rice, sambar, beans curry, and papad",
-      "snack": "Apple slices and cheese",
+      "breakfast": "Pesarattu with karam chutney",
+      "lunch": "Lemon rice",
+      "snack": "Pomegranate",
       "dinner": "Upma with vegetables"
     },
     {
       "day": "Wednesday",
-      "breakfast": "Dosa with coconut chutney",
-      "lunch": "Rice, rasam, cabbage curry, and yogurt",
-      "snack": "Orange and biscuits",
-      "dinner": "Chapati with dal and vegetable curry"
+      "breakfast": "Ragi dosa with coconut chutney",
+      "lunch": "Ghee rice with peanut and cashew",
+      "snack": "sweet potato",
+      "dinner": "Rasam rice"
     },
     {
       "day": "Thursday",
-      "breakfast": "Idli with tomato chutney",
-      "lunch": "Rice, dal, okra curry, and pickle",
-      "snack": "Grapes and milk",
-      "dinner": "Pongal with sambar"
-    },
-    {
-      "day": "Friday",
-      "breakfast": "Upma with vegetables and cashews",
-      "lunch": "Rice, sambar, carrot curry, and yogurt",
-      "snack": "Banana and dates",
+      "breakfast": "Rava upma with chutney",
+      "lunch": "Meti chapati with moong dal tadka",
+      "snack": "Uddina vada",
       "dinner": "Dosa with sambar"
     },
     {
+      "day": "Friday",
+      "breakfast": "Veg dal kichidi",
+      "lunch": "Chapati with rajma curry",
+      "snack": "Nuts ( peanut, rosted pees , rosted channa )",
+      "dinner": "Idli with sambar"
+    },
+    {
       "day": "Saturday",
-      "breakfast": "Idli with sambar and coconut chutney",
-      "lunch": "Rice, dal, potato curry, and papad",
-      "snack": "Mango and milk",
-      "dinner": "Chapati with dal and vegetable curry"
+      "breakfast": "Poori with aloo saagu",
+      "lunch": "Vegetable pulao",
+      "snack": "Dry fuits (dates, cashew, dry grapes, rosted almond )",
+      "dinner": "Rice with dal and pickle"
     },
     {
       "day": "Sunday",
-      "breakfast": "Dosa with potato curry",
-      "lunch": "Rice, sambar, mixed vegetable curry, and yogurt",
-      "snack": "Apple and cheese",
-      "dinner": "Pongal with coconut chutney"
+      "breakfast": "Pancake with honey",
+      "lunch": "Roti with paneer butter masala",
+      "snack": "Roasted makhana",
+      "dinner": "Curd rice"
     }
   ]
 }
-

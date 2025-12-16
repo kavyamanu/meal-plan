@@ -1,0 +1,48 @@
+{
+  "breakfast": [
+    "Grated carrot dosa with peanut chutney",
+    "Pesarattu with karam chutney",
+    "Egg dosa with sambar",
+    "Idly with veg sambar",
+    "Ragi dosa with coconut chutney",
+    "Ravva dosa with allam chutney",
+    "Rava upma with chutney",
+    "Samya upma with chutney",
+    "Veg dal kichidi",
+    "Poori with aloo saagu",
+    "Pancake with honey",
+    "bodunta with karam chutney"
+  ],
+  "lunch": [
+    "Rice sambar/dal",
+    "Mini veg parata",
+    "Lemon rice",
+    "Ghee rice with peanut and cashew",
+    "Meti chapati with moong dal tadka",
+    "Chapati with rajma curry",
+    "Roti with paneer butter masala",
+    "Vegetable pulao",
+    "Carrot rice",
+    "Tomato rice",
+    "Ghee rice with mashed potato and brinjal"
+  ],
+  "snack": [
+    "Boiled corn",
+    "Pomegranate",
+    "sweet potato",
+    "Uddina vada",
+    "Nuts ( peanut, rosted pees , rosted channa )",
+    "Dry fuits (dates, cashew, dry grapes, rosted almond )",
+    "Roasted makhana",
+    "Boiled and roasted Channa"
+  ],
+  "dinner": [
+    "Dosa with potato curry",
+    "Upma with vegetables",
+    "Rasam rice",
+    "Dosa with sambar",
+    "Idli with sambar",
+    "Rice with dal and pickle",
+    "Curd rice"
+  ]
+}

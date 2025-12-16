@@ -14,7 +14,7 @@ const mealIcons: Record<string, string> = {
 
 export default function DayMenu({ meal }: DayMenuProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-5 md:space-y-6">
       <MealCard
         title="Breakfast"
         meal={meal.breakfast}

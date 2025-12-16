@@ -15,5 +15,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
 }
 
