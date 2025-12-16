@@ -1,0 +1,32 @@
+{
+  "week": [
+    {
+      "day": "Monday",
+      "activity": "Drawing and coloring"
+    },
+    {
+      "day": "Tuesday",
+      "activity": "Outdoor play, cycling, kick soccer"
+    },
+    {
+      "day": "Wednesday",
+      "activity": "Reading books, motor activities(hand walk, color match, jumping"
+    },
+    {
+      "day": "Thursday",
+      "activity": "Music and dance"
+    },
+    {
+      "day": "Friday",
+      "activity": "Story time, pretending play"
+    },
+    {
+      "day": "Saturday",
+      "activity": "Puzzle games"
+    },
+    {
+      "day": "Sunday",
+      "activity": "Family time"
+    }
+  ]
+}

@@ -2,50 +2,53 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import EditableDayMenu from "@/components/EditableDayMenu";
+import EditableActivityCard from "@/components/EditableActivityCard";
 import {
-  getMealForDay,
+  getActivityForDay,
   getDayName,
-  getAllMeals,
-  saveCustomMeals,
-  hasCustomMeals,
-} from "@/lib/meals";
-import { Meal, MealData } from "@/types/meal";
+  getAllActivities,
+  saveCustomActivities,
+  hasCustomActivities,
+} from "@/lib/activities";
+import { Activity, ActivityData } from "@/types/activity";
 
-export default function Home() {
+export default function ActivitiesPage() {
   const [dayOffset, setDayOffset] = useState(0);
-  const [currentMeal, setCurrentMeal] = useState<Meal | null>(null);
+  const [currentActivity, setCurrentActivity] = useState<Activity | null>(null);
   const [dayName, setDayName] = useState("");
   const [isCustom, setIsCustom] = useState(false);
   const [hasChanges, setHasChanges] = useState(false);
 
-  const loadMeal = (offset: number) => {
-    const meal = getMealForDay(offset);
+  const loadActivity = (offset: number) => {
+    const activity = getActivityForDay(offset);
     const day = getDayName(offset);
-    setCurrentMeal(meal);
+    setCurrentActivity(activity);
     setDayName(day);
-    setIsCustom(hasCustomMeals());
+    setIsCustom(hasCustomActivities());
   };
 
   useEffect(() => {
-    loadMeal(dayOffset);
+    loadActivity(dayOffset);
   }, [dayOffset]);
 
-  const handleMealUpdate = (updatedMeal: Meal) => {
-    setCurrentMeal(updatedMeal);
+  const handleActivityUpdate = (updatedActivity: string) => {
+    if (!currentActivity) return;
+
+    const updated = { ...currentActivity, activity: updatedActivity };
+    setCurrentActivity(updated);
     setHasChanges(true);
 
-    // Update the meal in the full week data
-    const allMeals = getAllMeals();
-    const updatedMeals = allMeals.map((m) =>
-      m.day === updatedMeal.day ? updatedMeal : m
+    // Update the activity in the full week data
+    const allActivities = getAllActivities();
+    const updatedActivities = allActivities.map((a) =>
+      a.day === updated.day ? updated : a
     );
-    const mealData: MealData = { week: updatedMeals };
-    saveCustomMeals(mealData);
+    const activityData: ActivityData = { week: updatedActivities };
+    saveCustomActivities(activityData);
 
     // Trigger update event
     if (typeof window !== "undefined") {
-      window.dispatchEvent(new Event("mealPlanUpdated"));
+      window.dispatchEvent(new Event("activitiesUpdated"));
     }
   };
 
@@ -59,7 +62,7 @@ export default function Home() {
     setHasChanges(false);
   };
 
-  if (!currentMeal) {
+  if (!currentActivity) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 flex items-center justify-center">
         <p className="text-xl text-gray-600">Loading...</p>
@@ -72,11 +75,9 @@ export default function Home() {
       <div className="container mx-auto px-4 py-6 md:py-8 max-w-3xl">
         <header className="text-center mb-6 md:mb-8">
           <h1 className="text-2xl md:text-3xl font-semibold text-purple-600 mb-1">
-            🍽️ Kids Meal Plan
+            🎨 After School Activities
           </h1>
-          <p className="text-gray-500 text-sm md:text-base mb-4">
-            Today&apos;s Menu
-          </p>
+          <p className="text-gray-500 text-sm md:text-base mb-4">Today&apos;s Activity</p>
           <p className="text-4xl md:text-5xl font-bold text-pink-500 mb-2">
             {dayName}
           </p>
@@ -88,7 +89,10 @@ export default function Home() {
         </header>
 
         <main className="mb-8 md:mb-10">
-          <EditableDayMenu meal={currentMeal} onUpdate={handleMealUpdate} />
+          <EditableActivityCard
+            activity={currentActivity.activity}
+            onUpdate={handleActivityUpdate}
+          />
         </main>
 
         <footer className="text-center space-y-4">
@@ -108,10 +112,10 @@ export default function Home() {
           </div>
           <div className="pt-4">
             <Link
-              href="/activities"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold text-base py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+              href="/"
+              className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-semibold text-base py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
             >
-              🎨 After School Activities →
+              ← Back to Meals
             </Link>
           </div>
         </footer>
@@ -119,3 +123,4 @@ export default function Home() {
     </div>
   );
 }
+
